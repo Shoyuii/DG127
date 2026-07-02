@@ -19,6 +19,8 @@ BEGIN [โจทย์A]
 
 END
 
+---
+
 BEGIN [โจทย์B]
 	INPUT "a" and "b"
 	IF a >b THEN
@@ -29,6 +31,8 @@ BEGIN [โจทย์B]
     END IF
 
 END
+
+---
 
 BEGIN[โจทย์C]
 	INPUT N

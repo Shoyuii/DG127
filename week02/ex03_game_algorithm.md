@@ -13,6 +13,8 @@ D1 -->|No| Show[/แสดง enemy_hp ที่เหลือ/]
 Win & Show --> End([End])
 ```
 
+---
+
 โจทย์ B
 
 ```mermaid
@@ -27,4 +29,22 @@ D --> Output
 Output --> End([End])
 ```
 
+---
+
 โจทย์ C
+
+```mermaid
+flowchart TD
+Start([Start]) --> A[pos = A, dir = forward]
+A --> B{ระยะถึง player < 100?}
+B --> |Yes| C[/chase player/]
+C --> End([End])
+B --> D[เลื่อน enemy ตาม dir]
+D --> E{ถึงจุด B?}
+E --> |Yes| F[dir = กลับไป A]
+F --> B
+E --> |No| G{ถึงจุด A?}
+G --> |No| B
+G --> |Yes| H[dir = ไปหน้า B]
+H --> B
+```
