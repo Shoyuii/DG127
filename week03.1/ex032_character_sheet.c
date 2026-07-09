@@ -30,6 +30,6 @@ int main()
     printf("║ HP Bar:[██████████] 100%       ║\n");
     printf("║ Total Power: %-18d║\n", (Attack_Power * 2 + Defense + Max_HP / 10));
     printf("╚════════════════════════════════╝\n");
-    // Ex.Answer : Name=Sho Level=999 HP=999 ATK=999 DEF=999
+
     return 0;
 }

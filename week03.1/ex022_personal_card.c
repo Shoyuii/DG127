@@ -26,6 +26,6 @@ int main()
     printf("│ GPA               : %-14.2f│\n", GPA);
     printf("│ Favorite Subject  : %-14s│\n", Favorite_Subject);
     printf("└───────────────────────────────────┘\n");
-    // Ex.Answer : Name=Sho Age=18 GPA=4.00 Favorite Subject=ComPro
+
     return 0;
 }
