@@ -20,15 +20,15 @@ int main()
     //---------------------------------------------------------------------------
     printf("\n========= CHARACTER SHEET =========\n");
     printf("╔════════════════════════════════╗\n");
-    printf("║ %s                            ║\n", Character_Name);
+    printf("║ %-31s║\n", Character_Name);
     printf("╠════════════════════════════════╣\n");
-    printf("║ Level          : %d           ║\n", Level);
-    printf("║ HP             : %d/%d       ║\n", Max_HP, Max_HP);
-    printf("║ ATK            : %d           ║\n", Attack_Power);
-    printf("║ DEF            : %d           ║\n", Defense);
+    printf("║ Level          : %-14d║\n", Level);
+    printf("║ HP             : %d/%-10d║\n", Max_HP, Max_HP);
+    printf("║ ATK            : %-14d║\n", Attack_Power);
+    printf("║ DEF            : %-14d║\n", Defense);
     printf("╠════════════════════════════════╣\n");
     printf("║ HP Bar:[██████████] 100%       ║\n");
-    printf("║ Total Power: %d              ║\n", (Attack_Power * 2 + Defense + Max_HP / 10));
+    printf("║ Total Power: %-18d║\n", (Attack_Power * 2 + Defense + Max_HP / 10));
     printf("╚════════════════════════════════╝\n");
     // Ex.Answer : Name=Sho Level=999 HP=999 ATK=999 DEF=999
     return 0;

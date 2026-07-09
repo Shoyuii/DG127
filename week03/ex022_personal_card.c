@@ -20,11 +20,11 @@ int main()
     //---------------------------------------------------------------------------
     printf("\n=== PERSONAL CARD ===\n");
     printf("┌───────────────────────────────────┐\n");
-    printf("│ Name              : %s           │\n", name);
-    printf("│ Age               : %d", age);
-    printf(" years old  │\n");
-    printf("│ GPA               : %.2f          │\n", GPA);
-    printf("│ Favorite Subject  : %s        │\n", Favorite_Subject);
+    printf("│ Name              : %-14s│\n", name);
+    printf("│ Age               : %-3d", age);
+    printf(" years old │\n");
+    printf("│ GPA               : %-14.2f│\n", GPA);
+    printf("│ Favorite Subject  : %-14s│\n", Favorite_Subject);
     printf("└───────────────────────────────────┘\n");
     // Ex.Answer : Name=Sho Age=18 GPA=4.00 Favorite Subject=ComPro
     return 0;
