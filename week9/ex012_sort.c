@@ -23,11 +23,15 @@ int main()
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
+            printf("After: ");
+            for (int i = 0; i < n; i++)
+                printf("%d ", arr[i]);
+            printf("\n");
         }
-        printf("After: ");
-        for (int i = 0; i < n; i++)
-            printf("%d ", arr[i]);
-        printf("\n");
     }
     return 0;
+    // 23 69 45 12 27
+    // 1. 23 45 69 12 27
+    // 2. 23 45 12 69 27
+    // 3. 23 12 45
 }

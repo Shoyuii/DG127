@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX_SIZE 100
+#define MAX_SIZE 10
 int main()
 {
     int arr[MAX_SIZE];
@@ -18,7 +18,10 @@ int main()
         if (arr[i] < min)
             min = arr[i];
         if (arr[i] > max)
+        {
             max = arr[i];
+            break;
+        }
         sum += arr[i];
     }
     float average = (float)sum / n;
