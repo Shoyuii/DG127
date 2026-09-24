@@ -2,7 +2,7 @@
 
 int main()
 {
-    int PressAnyKey, Music = 1, FPS = 60, SettingOption, ContinueOption, Hp_slime = 100, Hp_player = 100, Attack_slime = 10, ActionChoice;
+    int PressAnyKey, Music = 1, FPS = 60, SettingOption, ContinueOption, Hp_slime = 100, Hp_player = 100, Attack_slime = 10, ActionChoice = 99;
     int gold_player = 0, Atk_player = 20, Def_player = 5, mp_player = 0;
     char playerName[50], SlimeName[50] = "Slime";
     do
@@ -105,7 +105,7 @@ int main()
         printf("o-------------------------------------------------------------o o-----------------------o\n");
         printf("|                                                             | |        Status         |\n");
         printf("|                                                             | o-----------------------o\n");
-        printf("|       %s:%-10d                  %s:%-11d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+        printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
         printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
         printf("|                                                             | |DEF : %-11d      |\n", Def_player);
         printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -124,7 +124,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -195,7 +195,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -263,7 +263,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -275,9 +275,9 @@ int main()
             printf("Congratulations! You have defeated the slime.(0=Continue)\n");
             scanf("%d", &ContinueOption);
             printf("You gained experience and loot!\n");
-            printf("+10000 Gold(0=Continue)\n");
+            printf("+100000 Gold(0=Continue)\n");
             scanf("%d", &ContinueOption);
-            gold_player += 10000;
+            gold_player += 100000;
             printf("You now have %d Gold.(0=Continue)\n", gold_player);
             scanf("%d", &ContinueOption);
             break;
@@ -444,177 +444,38 @@ int main()
             } while (gold_player != 0);
         }
     } while (ShopChoice != 0);
-    int wave = 1, Hp_monster = 100, Attack_monster = 10, Hp_monsterMiniBoss = 200, Attack_monsterMiniBoss = 20, Hp_monsterBoss2 = 500, Attack_monsterBoss2 = 50;
-    char monsterName[50] = "Goblin", monsterMiniBoss[50] = "Orc", monsterBoss2[50] = "King Skeleton";
+
+    // Boss fightttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+
+    int wave = 1, Hp_monster = 100, Attack_monster = 10;
+    char monsterName[50];
+    ActionChoice = 99;
     for (int i = 1; i <= 20; i++)
     {
-        printf("o---------------------------------------------------------------------------------------o\n");
-        printf("|                                      Tutorial                                         |\n");
-        printf("o---------------------------------------------------------------------------------------o\n");
-        printf("o-------------------------------------------------------------o o-----------------------o\n");
-        printf("|                                                             | |        Status         |\n");
-        printf("|                                                             | o-----------------------o\n");
-        printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
-        printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
-        printf("|                                                             | |DEF : %-11d      |\n", Def_player);
-        printf("|                                                             | |MP  : %-11d      |\n", mp_player);
-        printf("|                                                             | |Gold: %-11d      |\n", gold_player);
-        printf("o-------------------------------------------------------------o o-----------------------o\n");
-        printf("o-------------o  o------------o  o------------o  o------------o\n");
-        printf("|  1.Fight    |  |  2.Emote   |  | 3.Backpack |  |   4.Run    |\n");
-        printf("o-------------o  o------------o  o------------o  o------------o\n");
-        printf("What will you do? (1-4)\n");
-        scanf("%d", &ActionChoice);
-        if (ActionChoice == 1)
+        do
         {
+            if (wave % 5 == 0 && wave < 20)
+            {
+                char monsterName[50] = "Orc";
+                int Attack_monster = 20 * wave, Hp_monster = 200 * wave;
+            }
+            else if (wave == 20)
+            {
+                char monsterName[50] = "King Skeleton";
+                int Attack_monster = 50 * wave, Hp_monster = 500 * wave;
+            }
+            else
+            {
+                char monsterName[50] = "Goblin";
+                int Attack_monster = 10 * wave, Hp_monster = 100 * wave;
+            }
             printf("o---------------------------------------------------------------------------------------o\n");
-            printf("|                                      Tutorial                                         |\n");
+            printf("|                                      Wave : %-7d                                   |\n", wave);
             printf("o---------------------------------------------------------------------------------------o\n");
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
-            printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
-            printf("|                                                             | |DEF : %-11d      |\n", Def_player);
-            printf("|                                                             | |MP  : %-11d      |\n", mp_player);
-            printf("|                                                             | |Gold: %-11d      |\n", gold_player);
-            printf("o-------------------------------------------------------------o o-----------------------o\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("|          1.Slash            |  |                            |\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("|                             |  |                            |\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            int FightChoice;
-            printf("Choose your skill(0=Exit)\n");
-            scanf("%d", &FightChoice);
-            if (FightChoice == 0)
-            {
-                printf("You chose to exit the attack menu.\n");
-                continue;
-            }
-            if (FightChoice == 1)
-            {
-                printf("You choose to slash!\n");
-                if (Hp_slime > 0)
-                {
-                    int SlimeHit = 1;
-                    if (SlimeHit % 3 == 0)
-                    {
-                        Hp_player -= ((Attack_slime * 2) - Def_player);
-                        printf("The slime attacked you for %d damage!\n", Attack_slime);
-                        Hp_slime -= Atk_player;
-                    }
-                    else
-                    {
-                        Hp_player -= (Attack_slime - Def_player);
-                        printf("The slime attacked you for %d damage!\n", Attack_slime);
-                        Hp_slime -= Atk_player;
-                        SlimeHit++;
-                    }
-                }
-            }
-            if (FightChoice == 2)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-            if (FightChoice == 3)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-            if (FightChoice == 4)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-        }
-        else if (ActionChoice == 2)
-        {
-            printf("You used an emote? (0=Continue)\n");
-            scanf("%d", &ContinueOption);
-            Attack_slime += 1000;
-        }
-        else if (ActionChoice == 3)
-        {
-            printf("o---------------------------------------------------------------------------------------o\n");
-            printf("|                                      Tutorial                                         |\n");
-            printf("o---------------------------------------------------------------------------------------o\n");
-            printf("o-------------------------------------------------------------o o-----------------------o\n");
-            printf("|                                                             | |        Status         |\n");
-            printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
-            printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
-            printf("|                                                             | |DEF : %-11d      |\n", Def_player);
-            printf("|                                                             | |MP  : %-11d      |\n", mp_player);
-            printf("|                                                             | |Gold: %-11d      |\n", gold_player);
-            printf("o-------------------------------------------------------------o o-----------------------o\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("|                             |  |                            |\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            printf("|                             |  |                            |\n");
-            printf("o-----------------------------o  o----------------------------o\n");
-            int BackpackChoice;
-            printf("Choose your skill(0=Exit)\n");
-            scanf("%d", &BackpackChoice);
-            if (BackpackChoice == 0)
-            {
-                printf("You chose to exit the attack menu.\n");
-                continue;
-            }
-            if (BackpackChoice == 1)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-            if (BackpackChoice == 2)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-            if (BackpackChoice == 3)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-            if (BackpackChoice == 4)
-            {
-                printf("Not implemented yet.\n");
-                continue;
-            }
-        }
-        else if (ActionChoice == 4)
-        {
-            printf("You ran away from the slime.\n");
-            break;
-        }
-        else
-        {
-            printf("Invalid choice. Please choose again.\n");
-        }
-    }
-    while (Hp_slime > 0 && Hp_player > 0)
-        ;
-    while (Hp_slime <= 0)
-    {
-        if (Hp_player <= 0)
-        {
-            printf("You have been defeated by the slime.\n");
-            printf("Game Over.(0=Continue)\n");
-            scanf("%d", &ContinueOption);
-            break;
-        }
-        else
-        {
-            printf("o---------------------------------------------------------------------------------------o\n");
-            printf("|                                      Tutorial                                         |\n");
-            printf("o---------------------------------------------------------------------------------------o\n");
-            printf("o-------------------------------------------------------------o o-----------------------o\n");
-            printf("|                                                             | |        Status         |\n");
-            printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, monsterName, Hp_monster, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -623,17 +484,176 @@ int main()
             printf("o-------------o  o------------o  o------------o  o------------o\n");
             printf("|  1.Fight    |  |  2.Emote   |  | 3.Backpack |  |   4.Run    |\n");
             printf("o-------------o  o------------o  o------------o  o------------o\n");
-            printf("Congratulations! You have defeated the slime.(0=Continue)\n");
-            scanf("%d", &ContinueOption);
-            printf("You gained experience and loot!\n");
-            printf("+10000 Gold(0=Continue)\n");
-            scanf("%d", &ContinueOption);
-            gold_player += 10000;
-            printf("You now have %d Gold.(0=Continue)\n", gold_player);
-            scanf("%d", &ContinueOption);
-            break;
+            printf("What will you do? (1-4)\n");
+            scanf("%d", &ActionChoice);
+            if (ActionChoice == 1)
+            {
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("|                                      Wave : %-7d                                   |\n", wave);
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("|                                                             | |        Status         |\n");
+                printf("|                                                             | o-----------------------o\n");
+                printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, monsterName, Hp_monster, Hp_player);
+                printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
+                printf("|                                                             | |DEF : %-11d      |\n", Def_player);
+                printf("|                                                             | |MP  : %-11d      |\n", mp_player);
+                printf("|                                                             | |Gold: %-11d      |\n", gold_player);
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("|          1.Slash            |  |                            |\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("|                             |  |                            |\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                int FightChoice;
+                printf("Choose your skill(0=Exit)\n");
+                scanf("%d", &FightChoice);
+                if (FightChoice == 0)
+                {
+                    printf("You chose to exit the attack menu.\n");
+                    continue;
+                }
+                if (FightChoice == 1)
+                {
+                    printf("You choose to slash!\n");
+                    if (Hp_monster > 0)
+                    {
+                        int MonsterHit = 1;
+                        if (MonsterHit % 3 == 0)
+                        {
+                            Hp_player -= ((Attack_monster * 2) - Def_player);
+                            printf("The slime attacked you for %d damage!\n", Attack_monster);
+                            Hp_monster -= Atk_player;
+                            MonsterHit++;
+                        }
+                        else
+                        {
+                            Hp_player -= (Attack_monster - Def_player);
+                            printf("The slime attacked you for %d damage!\n", Attack_monster);
+                            Hp_monster -= Atk_player;
+                            MonsterHit++;
+                        }
+                    }
+                }
+                if (FightChoice == 2)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+                if (FightChoice == 3)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+                if (FightChoice == 4)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+            }
+            else if (ActionChoice == 2)
+            {
+                printf("You used an emote? (0=Continue)\n");
+                scanf("%d", &ContinueOption);
+                Attack_monster += 10;
+            }
+            else if (ActionChoice == 3)
+            {
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("|                                      Wave : %-7d                                   |\n", wave);
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("|                                                             | |        Status         |\n");
+                printf("|                                                             | o-----------------------o\n");
+                printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, monsterName, Hp_monster, Hp_player);
+                printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
+                printf("|                                                             | |DEF : %-11d      |\n", Def_player);
+                printf("|                                                             | |MP  : %-11d      |\n", mp_player);
+                printf("|                                                             | |Gold: %-11d      |\n", gold_player);
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("|                             |  |                            |\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                printf("|                             |  |                            |\n");
+                printf("o-----------------------------o  o----------------------------o\n");
+                int BackpackChoice;
+                printf("Choose your skill(0=Exit)\n");
+                scanf("%d", &BackpackChoice);
+                if (BackpackChoice == 0)
+                {
+                    printf("You chose to exit the attack menu.\n");
+                    continue;
+                }
+                if (BackpackChoice == 1)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+                if (BackpackChoice == 2)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+                if (BackpackChoice == 3)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+                if (BackpackChoice == 4)
+                {
+                    printf("Not implemented yet.\n");
+                    continue;
+                }
+            }
+            else if (ActionChoice == 4)
+            {
+                printf("You ran away from the monster.\n");
+                break;
+            }
+            else
+            {
+                printf("Invalid choice. Please choose again.\n");
+            }
+        } while (Hp_monster > 0 && Hp_player > 0);
+        while (Hp_monster <= 0)
+        {
+            if (Hp_player <= 0)
+            {
+                printf("You have been defeated by the monster.\n");
+                printf("Game Over.(0=Continue)\n");
+                scanf("%d", &ContinueOption);
+                break;
+            }
+            else
+            {
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("|                                      Wave : %-7d                                   |\n", wave);
+                printf("o---------------------------------------------------------------------------------------o\n");
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("|                                                             | |        Status         |\n");
+                printf("|                                                             | o-----------------------o\n");
+                printf("|       %-10s:%-15d       %-10s:%-8d  | |HP  : %-11d      |\n", playerName, Hp_player, monsterName, Hp_monster, Hp_player);
+                printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
+                printf("|                                                             | |DEF : %-11d      |\n", Def_player);
+                printf("|                                                             | |MP  : %-11d      |\n", mp_player);
+                printf("|                                                             | |Gold: %-11d      |\n", gold_player);
+                printf("o-------------------------------------------------------------o o-----------------------o\n");
+                printf("o-------------o  o------------o  o------------o  o------------o\n");
+                printf("|  1.Fight    |  |  2.Emote   |  | 3.Backpack |  |   4.Run    |\n");
+                printf("o-------------o  o------------o  o------------o  o------------o\n");
+                printf("Congratulations! You have defeated the slime.(0=Continue)\n");
+                scanf("%d", &ContinueOption);
+                printf("You gained experience and loot!\n");
+                scanf("%d", &ContinueOption);
+                gold_player += 1000 * wave;
+                printf("You now have %d Gold.(0=Continue)\n", gold_player);
+                scanf("%d", &ContinueOption);
+                break;
+                wave++;
+            }
         }
     }
-
     return 0;
 }

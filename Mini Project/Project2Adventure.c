@@ -18,7 +18,7 @@ Player createPlayer(const char *name, int hp, int atk, int def, int level, const
     p.gold = 0;
     return p;
 }
-void Start_board()
+void Start_board(int Start)
 {
     printf("                            o-----------------------o\n");
     printf("                            |       Adventure       |\n");
@@ -32,4 +32,12 @@ void Start_board()
     printf("                             o---------------------o\n");
     printf("                             |        Exit         |\n");
     printf("                             o---------------------o\n");
+}
+
+int main()
+{
+    int Start_Key = 0;
+    printf("");
+    Start_board(Start_Key);
+    return 0;
 }
