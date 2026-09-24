@@ -447,28 +447,29 @@ int main()
 
     // Boss fightttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
 
-    int wave = 1, Hp_monster = 100, Attack_monster = 10;
+    int wave = 0, Hp_monster = 100, Attack_monster = 10;
     char monsterName[50];
     ActionChoice = 99;
     for (int i = 1; i <= 20; i++)
     {
+        if (wave % 5 == 0 && wave < 20)
+        {
+            char monsterName[50] = "Orc";
+            int Attack_monster = 20 * wave, Hp_monster = 200 * wave;
+        }
+        else if (wave == 20)
+        {
+            char monsterName[50] = "King Skeleton";
+            int Attack_monster = 50 * wave, Hp_monster = 500 * wave;
+        }
+        else
+        {
+            char monsterName[50] = "Goblin";
+            int Attack_monster = 10 * wave, Hp_monster = 100 * wave;
+        }
         do
         {
-            if (wave % 5 == 0 && wave < 20)
-            {
-                char monsterName[50] = "Orc";
-                int Attack_monster = 20 * wave, Hp_monster = 200 * wave;
-            }
-            else if (wave == 20)
-            {
-                char monsterName[50] = "King Skeleton";
-                int Attack_monster = 50 * wave, Hp_monster = 500 * wave;
-            }
-            else
-            {
-                char monsterName[50] = "Goblin";
-                int Attack_monster = 10 * wave, Hp_monster = 100 * wave;
-            }
+
             printf("o---------------------------------------------------------------------------------------o\n");
             printf("|                                      Wave : %-7d                                   |\n", wave);
             printf("o---------------------------------------------------------------------------------------o\n");
@@ -651,9 +652,9 @@ int main()
                 printf("You now have %d Gold.(0=Continue)\n", gold_player);
                 scanf("%d", &ContinueOption);
                 break;
-                wave++;
             }
         }
+        wave++;
     }
     return 0;
 }
