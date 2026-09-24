@@ -105,7 +105,7 @@ int main()
         printf("o-------------------------------------------------------------o o-----------------------o\n");
         printf("|                                                             | |        Status         |\n");
         printf("|                                                             | o-----------------------o\n");
-        printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+        printf("|       %s:%-10d                  %s:%-11d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
         printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
         printf("|                                                             | |DEF : %-11d      |\n", Def_player);
         printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -124,7 +124,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -195,7 +195,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -263,7 +263,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -454,7 +454,7 @@ int main()
         printf("o-------------------------------------------------------------o o-----------------------o\n");
         printf("|                                                             | |        Status         |\n");
         printf("|                                                             | o-----------------------o\n");
-        printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+        printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
         printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
         printf("|                                                             | |DEF : %-11d      |\n", Def_player);
         printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -473,7 +473,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -544,7 +544,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);
@@ -614,7 +614,7 @@ int main()
             printf("o-------------------------------------------------------------o o-----------------------o\n");
             printf("|                                                             | |        Status         |\n");
             printf("|                                                             | o-----------------------o\n");
-            printf("|       %s:%-10d                  %s:%-14d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
+            printf("|       %s:%-10d                  %s:%-12d  | |HP  : %-11d      |\n", playerName, Hp_player, SlimeName, Hp_slime, Hp_player);
             printf("|          +                               o                  | |ATK : %-11d      |\n", Atk_player);
             printf("|                                                             | |DEF : %-11d      |\n", Def_player);
             printf("|                                                             | |MP  : %-11d      |\n", mp_player);

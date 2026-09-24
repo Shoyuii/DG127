@@ -15,8 +15,6 @@
         "*.c": "c"
     },
     "files.encoding": "utf8",
-    "code-runner.fileDirectoryAsCwd": true,
-    "code-runner.runInTerminal": true,
     "editor.formatOnSave": true,
     "C_Cpp.default.cStandard": "c99"
 }

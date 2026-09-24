@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct
+{
+    char name[30];
+    int hp, max_hp, attack, defense, level, gold;
+} Player;
+Player createPlayer(const char *name, int hp, int atk, int def, int level, const int gold)
+{
+    Player p;
+    strncpy(p.name, name, sizeof(p.name) - 1);
+    p.name[sizeof(p.name) - 1] = '\0';
+    p.hp = hp;
+    p.max_hp = hp;
+    p.attack = atk;
+    p.defense = def;
+    p.level = level;
+    p.gold = 0;
+    return p;
+}
+void Start_board()
+{
+    printf("                            o-----------------------o\n");
+    printf("                            |       Adventure       |\n");
+    printf("                            o-----------------------o\n");
+    printf("                             o---------------------o\n");
+    printf("                             |        Start        |\n");
+    printf("                             o---------------------o\n");
+    printf("                             o---------------------o\n");
+    printf("                             |       Setting       |\n");
+    printf("                             o---------------------o\n");
+    printf("                             o---------------------o\n");
+    printf("                             |        Exit         |\n");
+    printf("                             o---------------------o\n");
+}

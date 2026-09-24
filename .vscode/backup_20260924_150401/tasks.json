@@ -4,15 +4,19 @@
         {
             "type": "shell",
             "label": "C/C++: Build (MSYS2)",
-            "command": "powershell",
+            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "args": [
-                "-NoProfile",
-                "-ExecutionPolicy", "Bypass",
-                "-File", "${workspaceFolder}\\.vscode\\build.ps1",
-                "${file}"
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}",
+                "env": {
+                    "PATH": "C:\\msys64\\mingw64\\bin;C:\\msys64\\usr\\bin;${env:PATH}"
+                }
             },
             "problemMatcher": [
                 "$gcc"
@@ -21,7 +25,7 @@
                 "kind": "build",
                 "isDefault": false
             },
-            "detail": "Build active file, or whole folder if it has main.c + other .c files (multi-file). Auto-links Raylib when raylib.h is included."
+            "detail": "Standard build task for MSYS2 GCC using shell execution."
         },
         {
             "type": "cppbuild",
@@ -49,16 +53,27 @@
         {
             "type": "shell",
             "label": "C/C++: Compile with Raylib",
-            "command": "powershell",
+            "command": "C:/msys64/mingw64/bin/gcc.exe",
             "args": [
-                "-NoProfile",
-                "-ExecutionPolicy", "Bypass",
-                "-File", "${workspaceFolder}\\.vscode\\build.ps1",
+                "-std=c99",
+                "-Wall",
+                "-Wextra",
+                "-g",
                 "${file}",
-                "-Raylib"
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I", "C:/msys64/mingw64/include",
+                "-L", "C:/msys64/mingw64/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}",
+                "env": {
+                    "PATH": "C:\\msys64\\mingw64\\bin;C:\\msys64\\usr\\bin;${env:PATH}"
+                }
             },
             "problemMatcher": [
                 "$gcc"
