@@ -54,7 +54,7 @@
    หน่วย = ช่อง / วินาที
 */
 #define START_SPEED 10.0f
-#define MAX_SPEED 50.0f
+#define MAX_SPEED 100.0f
 
 /*
    Score 100 จะถึงความเร็วสูงสุด
